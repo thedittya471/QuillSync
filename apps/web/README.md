@@ -1,25 +1,33 @@
-# QuillSync Frontend (Web)
+# QuillSync
 
-This directory contains the React frontend application for QuillSync.
+A collaborative platform for creating and organizing content.
 
-## Tech Stack
-- **Framework:** React
-- **Language:** TypeScript
-- **Styling:** TailwindCSS
-- **Real-Time:** Socket.IO Client
+## Installation
 
-## Development
-
-To start the development server for the web app, run the following command from the root of the repository:
+Install project dependencies:
 
 ```bash
-npm run dev:web
+npm install
 ```
 
-## Folder Structure (Recommended)
-- `src/components/`: Reusable UI components.
-- `src/pages/` or `src/app/`: Page-level components / routing.
-- `src/hooks/`: Custom React hooks.
-- `src/services/`: API integration and Socket.IO logic.
-- `src/store/`: Global state management.
-- `src/utils/`: Helper functions.
+Install React Router DOM:
+```bash
+npm install react-router-dom
+```
+
+## Running the Development Server
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```text
+http://localhost:5173
+or
+http://localhost:5174
+
+```
