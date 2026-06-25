@@ -10,16 +10,16 @@ export default function Signup(){
 
     function checkPasswordStrength(password) {
         return(
-        password.length===0?<div> {/*If password is empty*/}
-        <p class='text-red-500'> # Password must contain at least one number</p>
-        <p class='text-red-500'># Password must be at least 8 characters long</p>
+        password.length===0?<div className='flex justify-between'> {/*If password is empty*/}
+        <p class='text-red-500'> # At least one digit</p>
+        <p class='text-red-500'># At least 8 characters long</p>
         </div>
 
         :password.length<8? 
         /\d/.test(password)? <p class='text-red-500'># Password must be at least 8 characters long</p>:
-        <div>
-        <p class='text-red-500'># Password must contain at least one number</p>
-         <p class='text-red-500'># Password must be at least 8 characters long</p>
+        <div className='flex justify-between'>
+        <p class='text-red-500'># At least one digit</p>
+         <p class='text-red-500'># At least 8 characters long</p>
         </div>:
 
         /\d/.test(password)?'':<p class='text-red-500'># Password must contain at least one number</p> 
@@ -29,7 +29,7 @@ export default function Signup(){
 
 
     return (
-    <div className='border-2 border-black px-15 py-8 h-full shadow-black shadow-inner rounded-2xl w-2xl mt-6 m-auto'>
+    <div className='border-1 px-15 pt-5 pb-3 h-full shadow-gray-600 shadow-lg  rounded-2xl w-2xl mt-5 m-auto'>
         
         <div>
             <UserPlus className='mx-auto text-indigo-600 bg-indigo-300 p-4 rounded-full' size={70}/>
@@ -54,7 +54,7 @@ export default function Signup(){
         <label for='confirm-password' className='label-class'>Confirm Password:</label>
         <input type='password' id='confirm-password' name='confirm-password' className='input-class' placeholder='Confirm Password' required onChange={e=>setConfirmPassword(e.target.value)}/>
 
-        {password!==confirmPassword? <p className='text-red-500'>Passwords do not match</p>:''}
+        {password!==confirmPassword? <p className='text-red-500 mb-0 mt-1'>Passwords do not match</p>:''}
 
         <button type='submit' disabled={password!==confirmPassword || password.length===0} className={`${password===confirmPassword && password!==''? 'bg-indigo-600 opacity-100' : 'bg-gray-400 opacity-60'} text-white rounded-4xl text-2xl px-6 py-2 cursor-pointer mt-3 mb-0 ${password===confirmPassword && password!=''? 'hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-95':''}`}>
             Create Account</button>
@@ -66,6 +66,8 @@ export default function Signup(){
         <button className='bg-blue-500 rounded-4xl w-full mt-4 py-2 text-white text-2xl text-center cursor-pointer hover:bg-blue-600 transition duration-300 ease-in-out transform hover:scale-95'>
             <FcGoogle className='inline-block mr-2 bg-white rounded-4xl p-1' size={30}/> Sign up with
             Google</button>
+
+        <p className='text-center mt-2'>Already have an account ? <a href='/signin' className='text-indigo-700  text-'>Sign in</a></p>
 
     </div>
     )
