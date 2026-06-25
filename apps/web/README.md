@@ -14,6 +14,10 @@ Install React Router DOM:
 ```bash
 npm install react-router-dom
 ```
+Install Tailwind CSS :
+```bash 
+npm install tailwindcss @tailwindcss/vite
+```
 
 ## Running the Development Server
 
@@ -29,5 +33,7 @@ Open your browser and visit:
 http://localhost:5173
 or
 http://localhost:5174
+or
+http://localhost:5175
 
 ```
