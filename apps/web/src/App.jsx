@@ -1,3 +1,4 @@
+
 import Singup from './auth/Signup/signup.jsx';
 import { Routes,Route } from 'react-router-dom';
 
@@ -7,4 +8,3 @@ export default function App() {
         <Route path="/signup" element={<Singup />} />
       </Routes>
     );
-}
