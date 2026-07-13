@@ -1,0 +1,6 @@
+node_modules
+dist
+.next
+prisma/migrations
+apps/web/dist
+apps/server/dist
